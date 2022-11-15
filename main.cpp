@@ -10,28 +10,46 @@ void gotoxy(int x, int y)
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE),kursor);
 }
 
+int i=0;
 main()
 {
-    for(int y=0;y<11;y++)
+    for(int y=5;y<16;y++)
     {
-        if(y<=5)
+
+        if(y<=10)
         {
-            for(int x=0;x<=y;x++)
+
+            for(int g=1;g<=2*y-9;g++)
             {
-                gotoxy(45-x,3+y);
-                cout<<'*';
+
+                gotoxy(35+y-g,y);
+                cout <<'x';
+                Sleep(10);
+
+
+
             }
+
         }
-
-        else
-        {
-            for(int x=0;x<=10-y;x++)
-                {
-                    gotoxy(45-x,3+y);
-                    cout<<'*';
-                }
-        }
-
-
     }
+/*        else
+        {
+
+            for(int g=1;g<=9-i;g++)
+            {
+
+                gotoxy(55-y-g,y); //44.44,43...35
+                cout <<'x';
+                Sleep(10);
+
+            }
+            i=i+2;
+        }
+    }*/
+
+
+
+
+
+
 }
